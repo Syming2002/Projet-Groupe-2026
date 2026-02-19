@@ -12,6 +12,10 @@ div label {
   display: block;
 }
 
+label {
+    margin-left: 5vh;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -33,8 +37,18 @@ main {
   color: #FFFFFF;
   background-color: #19537d;
   width: 70vw;
-  height: 18vh;
+  height: 30vh;
   align-items: center;
   justify-content: center;
   border-radius: 2vh;
+  font-size: 4em;
+}
+
+input {
+    height:5vh;
+    width : 12vw;
+    border-radius: 4vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: inherit;
 }
