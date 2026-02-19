@@ -8,6 +8,101 @@
     <link rel="stylesheet" href="/css/dashboard_page.css">
 </head>
 <body>
-    
+    <div class="container-div">
+        <aside class="sidebar">
+            <h1 class="ice-text main-title">Job Handler</h1>
+            <div>
+                <h2 class="ice-text filter-title">Trier par:</h2>
+                <div class="filter-div">
+                    <select name="statut" id="statut-select" class="ice-button">
+                        <option value="">
+                            Statut
+                        </option>
+                    </select>
+                    <select name="post" id="post-select" class="ice-button">
+                        <option value="">
+                            Poste
+                        </option>
+                    </select>
+                    <select name="company" id="company-select" class="ice-button">
+                        <option value="">
+                            Entreprise
+                        </option>
+                    </select>
+                    <select name="date-send" id="date-send-select" class="ice-button">
+                        <option value="">
+                            Date d'envoi
+                        </option>
+                    </select>
+                    <select name="date-resend" id="date-resend-select" class="ice-button">
+                        <option value="">
+                            Date de relance
+                        </option>
+                    </select>
+                    <button class="ice-button">
+                        Déconnexion
+                    </button>
+                    <i class="fa-solid fa-user">
+                        
+                    </i>
+                </div>
+            </div>
+        </aside>
+        <div class="content-div">
+            <div class="track-div">
+                <div>
+                    <h3 class="ice-text track-text">Mes suivis</h3>
+                    <div class="ice-div">
+                    
+                    </div>
+                    <div class="add-track-div">
+                        <h4 class="ice-text add-track-title">Ajouter un suivi</h4>
+                        <div class="ice-add-button">
+                            +
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-div">
+                <form class="track-form">
+                    <h4 class="create-track-title ice-text">Créer un suivi</h4>
+                    <div class="form-contener">
+                        <div id="statut-div">
+                            <label for="" class="ice-text">Statut</label>
+                            <select required name="" id="" class="ice-button-form">
+                                <option value="">
+                                    Statut
+                                </option>
+                            </select>
+                        </div>
+                        <div id="post-div">
+                            <label for="" class="ice-text">Poste</label>
+                            <select required name="" id="" class="ice-button-form">
+                                <option value="">
+                                    Poste
+                                </option>
+                            </select>
+                        </div>
+                        <div id="company-div">
+                            <label for="" class="ice-text">Entreprise</label>
+                            <select required name="" id="" class="ice-button-form">
+                                <option value="">
+                                    Entreprise
+                                </option>
+                            </select>
+                        </div>
+                        <div id="date-send-div">
+                            <label for="" class="ice-text">Date d'envoi</label>
+                            <input type="date" class="ice-button-form">
+                        </div>
+                        <div id="date-resend-div">
+                            <label for="" class="ice-text">Date de relance</label>
+                            <input type="date" class="ice-button-form">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
