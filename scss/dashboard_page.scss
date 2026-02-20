@@ -53,7 +53,11 @@ body {
 
 .fa-user {
     color: $ice-white;
-    font-size: 64px;
+    font-size: 3em;
+}
+
+.content-div {
+    margin: 25px auto;
 }
 
 .fa-universal-access {
@@ -70,7 +74,6 @@ body {
     width: 1024px;
     display: flex;
     justify-content: center;
-    margin: 80px auto;
     border-radius: 20px;
 }
 
@@ -105,7 +108,7 @@ body {
     height: 200px;
     display: flex;
     justify-content: center;
-    margin: 50px 154.500px;
+    margin-top: 50px;
 }
 
 .create-track-title {
@@ -113,7 +116,7 @@ body {
     margin-top: 20px;
 }
 
-.form-contener {
+.form-container {
     display: flex;
     flex-direction: row;
     gap: 50px;
