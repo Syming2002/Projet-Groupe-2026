@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+@mixin ice-button() {
+    border-radius: 10px;
+    background-color: $ice-white;
+    border: none;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    color: $coal-black;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+
+@mixin ice-add-button() {
+    border-radius: 100%;
+    background-color: $ice-white;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    justify-self: center;
+    color: $coal-black;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+
+@mixin ice-button-form() {
+    border-radius: 10px;
+    background-color: $ice-white;
+    border: none;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: $coal-black;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
