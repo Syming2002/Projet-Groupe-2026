@@ -5,6 +5,7 @@
 
 body {
     font-family: "Space Grotesk";
+    font-size: 0.8em;
 }
 
 .connect-button {
@@ -32,12 +33,12 @@ main {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    margin-right: 10vw;
+    margin-right: 2vw;
 }
 
 .sidebar {
     background-color: $dark-blue;
-    width: 15vw;
+    width: 24vw;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -66,9 +67,13 @@ main {
     @include ice-button();
 }
 
+.ice-button:hover {
+    background-color:aquamarine
+}
+
 .fa-user {
     color: $ice-white;
- 
+    font-size: 3em;
 }
 
 .track-div {
@@ -171,7 +176,7 @@ div label {
 
 
 label {
-    margin-left: 5vh;
+    margin-left: 2vh;
 }
 
 
@@ -181,19 +186,23 @@ label {
   color: #FFFFFF;
   background-color: #19537d;
   width: 85vw;
-  height: 30vh;
+  height: 35vh;
   align-items: center;
   justify-content: center;
   border-radius: 2vh;
   font-size: 1em;
-  margin-right: 7vw;
+  margin-right: 1vw;
 }
 
 input {
     height:5vh;
-    width : 12vw;
+    width : 13vw;
     border-radius: 4vh;
     margin-right: 2vw;
     margin-left: 2vw;
     font-size: inherit;
+}
+
+#home-form {
+    margin-bottom: 2vh;
 }

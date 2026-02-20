@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/home_page.css" />
+    <script src="../js/home_page.js" defer></script>
   </head>
   <body>
     <main>
@@ -18,27 +19,22 @@
           <div class="connect-button">
             <h2 class="ice-text filter-title">Bienvenue</h2>
             <div class="filter-div">
-              
-              <button class="ice-button">Inscription</button>
-              <button class="ice-button">Connexion</button>
+              <button class="ice-button" id="register-btn">Inscription</button>
+              <button class="ice-button" id="login-btn">Connexion</button>
               <i class="fa-solid fa-user"> </i>
             </div>
           </div>
         </aside>
       </div>
-      <div id="home-login">
+      <form id="home-login">
         <div>
-          <h1>S'inscrire</h1>
+          <h2 id="form-title">S'inscrire</h2>
         </div>
-        <div>
-          <div><label>Nom</label><input placeholder="   Nom" /></div>
-          <div><label>Prénom</label><input placeholder="   Prénom" /></div>
-          <div><label>Email</label><input placeholder="   Email" /></div>
-          <div>
-            <label>Mot de passe</label><input placeholder="   Mot de passe" />
-          </div>
+        <div id="home-form">
+        
         </div>
-      </div>
+        <div id="confirm"></div>
+    </form>
     </main>
   </body>
 </html>
