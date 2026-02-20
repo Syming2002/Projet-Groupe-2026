@@ -10,6 +10,7 @@
     color: $coal-black;
     font-family: "Space Grotesk";
     font-weight: 500;
+    cursor: pointer;
 }
 
 @mixin ice-add-button() {
@@ -23,6 +24,7 @@
     color: $coal-black;
     font-family: "Space Grotesk";
     font-weight: 500;
+    cursor: pointer;
 }
 
 @mixin ice-button-form() {
@@ -35,4 +37,5 @@
     color: $coal-black;
     font-family: "Space Grotesk";
     font-weight: 500;
+    cursor: pointer;
 }

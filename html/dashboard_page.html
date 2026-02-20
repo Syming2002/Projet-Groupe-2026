@@ -6,6 +6,7 @@
     <title>Dashboard Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="/css/dashboard_page.css">
+    <script src="/js/dashboard.js" defer></script>
 </head>
 <body>
     <div class="container-div">
@@ -39,16 +40,21 @@
                             Date de relance
                         </option>
                     </select>
-                    <button class="ice-button">
+                    <button class="logout-button ice-button">
                         Déconnexion
                     </button>
-                    <i class="fa-solid fa-user">
-                        
-                    </i>
+                    <a href="/html/user_page.html">
+                        <i class="fa-solid fa-user">
+                            
+                        </i>
+                    </a>
                 </div>
             </div>
         </aside>
         <div class="content-div">
+            <i class="fa-solid fa-universal-access">
+
+            </i>
             <div class="track-div">
                 <div>
                     <h3 class="ice-text track-text">Mes suivis</h3>
@@ -57,9 +63,9 @@
                     </div>
                     <div class="add-track-div">
                         <h4 class="ice-text add-track-title">Ajouter un suivi</h4>
-                        <div class="ice-add-button">
+                        <button type="button" class="ice-add-button">
                             +
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -69,7 +75,7 @@
                     <div class="form-contener">
                         <div id="statut-div">
                             <label for="" class="ice-text">Statut</label>
-                            <select required name="" id="" class="ice-button-form">
+                            <select required name="" id="statut-form" class="ice-button-form">
                                 <option value="">
                                     Statut
                                 </option>
@@ -77,7 +83,7 @@
                         </div>
                         <div id="post-div">
                             <label for="" class="ice-text">Poste</label>
-                            <select required name="" id="" class="ice-button-form">
+                            <select required name="" id="post-form" class="ice-button-form">
                                 <option value="">
                                     Poste
                                 </option>
@@ -85,19 +91,19 @@
                         </div>
                         <div id="company-div">
                             <label for="" class="ice-text">Entreprise</label>
-                            <select required name="" id="" class="ice-button-form">
+                            <select required name="" id="company-form" class="ice-button-form">
                                 <option value="">
                                     Entreprise
                                 </option>
                             </select>
                         </div>
                         <div id="date-send-div">
-                            <label for="" class="ice-text">Date d'envoi</label>
-                            <input type="date" class="ice-button-form">
+                            <label for="date-send-form" class="ice-text">Date d'envoi</label>
+                            <input required type="date" name="date-send-form" id="date-send-form" class="ice-button-form">
                         </div>
                         <div id="date-resend-div">
-                            <label for="" class="ice-text">Date de relance</label>
-                            <input type="date" class="ice-button-form">
+                            <label for="date-resend-form" class="ice-text">Date de relance</label>
+                            <input type="date" name="date-resend-form" id="date-resend-form" class="ice-button-form">
                         </div>
                     </div>
                 </form>

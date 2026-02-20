@@ -16,7 +16,7 @@ body {
 .container-div {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 100%;
 }
 
 .sidebar {
@@ -28,6 +28,7 @@ body {
 
 .main-title {
     margin: 50px 0;
+    padding: 10px;
 }
 
 .ice-text {
@@ -55,14 +56,21 @@ body {
     font-size: 64px;
 }
 
+.fa-universal-access {
+    color: $dark-blue;
+    font-size: 42px;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}
+
 .track-div {
     background-color: $dark-blue;
     height: 570px;
     width: 1024px;
     display: flex;
     justify-content: center;
-    margin-left: 309px;
-    margin-top: 80px;
+    margin: 80px auto;
     border-radius: 20px;
 }
 
@@ -92,17 +100,17 @@ body {
 
 .form-div {
     background-color: $dark-blue;
+    border-radius: 20px;
     width: 1024px;
     height: 200px;
     display: flex;
     justify-content: center;
-    margin-left: 309px;
-    margin-top: 50px;
+    margin: 50px 154.500px;
 }
 
 .create-track-title {
     text-align: center;
-
+    margin-top: 20px;
 }
 
 .form-contener {

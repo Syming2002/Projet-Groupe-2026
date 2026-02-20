@@ -6,8 +6,37 @@
     <title>Page utilisateur</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="/css/user_page.css">
+    <script src="/js/user.js" defer></script>
 </head>
 <body>
-    
+    <div class="container-div">
+        <aside class="sidebar">
+            <h1 class="ice-text main-title">Job Handler</h1>
+            <div>
+                <div class="nav-div">
+                    <div id="profil-div">
+                        <i class="fa-solid fa-user">
+                            
+                        </i>
+                        <h2 class="ice-text">Mon Profil</h2>
+                    </div>
+                    <button class="reset-password-button ice-button">
+                        Réinitialiser mot de passe
+                    </button>
+                    <button type="button" onclick="onWatchTracksButtonClick()" class="ice-button watch-tracks-button">
+                        Voir mes suivis
+                    </button>
+                    <button class="logout-button ice-button">
+                        Déconnexion
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="content-div">
+            <i class="fa-solid fa-universal-access">
+
+            </i>
+        </div>
+    </div>
 </body>
 </html>
