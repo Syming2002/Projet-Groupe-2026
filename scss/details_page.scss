@@ -1,25 +1,28 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 body {
-    font-family: "Space Grotesk";
-    font-size: 0.8em;
+  font-family: "Space Grotesk";
+  font-size: 0.8em;
 }
 
 .connect-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -30,141 +33,203 @@ main {
 }
 
 .container-div {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    margin-right: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 125vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  justify-content: right;
 }
 
-.sidebar {
-    background-color: $dark-blue;
-    width: 24vw;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+.info-div {
+  background-color: #19537d;
+  width: 50vw;
+  height: 60vh;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  padding-top: 5vh;
+  padding-left: 2vh;
 }
 
-.main-title {
-    margin: 50px 0;
+.info {
+    color: #FFFFFF;
+    margin-bottom: 5vh;
 }
 
-.ice-text {
-    text-align: center;
-    color: $ice-white;
-}
-
-.filter-title {
-    margin-bottom: 10px;
-}
-
-.filter-div {
+.add-note {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    width: 45vw;
+}
+
+.note-btn {
+    width: 4vw;
+  height: 4vh;
+  border-radius: 3vw;
+  border: 0 solid #19537d;
+  margin-bottom: 1vh;
+}
+
+.note-label {
+    width: 16vw;
+    color: #FFFFFF;
+}
+
+.note-btn, .note-label {
+    display: block;
+}
+
+.notes-div {
+  background-color: #FFFFFF;
+  border: 2vh solid #19537d;
+  width: 70vw;
+  height: 40vh;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.notes-title {
+    background-color: #19537d;
+    color: #FFFFFF;
+    padding-left: 1vw;
+    padding-bottom: 1vh;
+}
+
+.sidebar {
+  background-color: $dark-blue;
+  width: 24vw;
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+  float: left;
+  height: 100vh;
+}
+
+.main-title {
+  margin: 50px 0;
+}
+
+.ice-text {
+  text-align: center;
+  color: $ice-white;
+}
+
+.filter-title {
+  margin-bottom: 10px;
+}
+
+.filter-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
 .ice-button {
-    @include ice-button();
+  @include ice-button();
 }
 
 .ice-button:hover {
-    background-color:aquamarine
+  background-color: aquamarine;
 }
 
 .fa-user {
-    color: $ice-white;
-    font-size: 3em;
+  color: $ice-white;
+  font-size: 3em;
 }
 
 .track-div {
-    background-color: $dark-blue;
-    height: 570px;
-    width: 1024px;
-    display: flex;
-    justify-content: center;
-    margin-left: 309px;
-    margin-top: 80px;
-    border-radius: 20px;
+  background-color: $dark-blue;
+  height: 570px;
+  width: 1024px;
+  display: flex;
+  justify-content: center;
+  margin-left: 309px;
+  margin-top: 80px;
+  border-radius: 20px;
 }
 
 .track-text {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .ice-div {
-    background-color: $ice-white;
-    width: 947px;
-    height: 415px;
-    border-radius: 20px;
-    margin-top: 25px;
+  background-color: $ice-white;
+  width: 947px;
+  height: 415px;
+  border-radius: 20px;
+  margin-top: 25px;
 }
 
 .add-track-div {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .add-track-title {
-    margin-bottom: 5px
+  margin-bottom: 5px;
 }
 
 .ice-add-button {
-    @include ice-add-button();
+  @include ice-add-button();
 }
 
 .form-div {
-    background-color: $dark-blue;
-    width: 1024px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    margin-left: 309px;
-    margin-top: 50px;
+  background-color: $dark-blue;
+  width: 1024px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-left: 309px;
+  margin-top: 50px;
 }
 
 .create-track-title {
-    text-align: center;
-
+  text-align: center;
 }
 
 .form-contener {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 30px;
 }
 
 #statut-div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .ice-button-form {
-    @include ice-button-form();
+  @include ice-button-form();
 }
 
 #post-div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #company-div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #date-send-div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #date-resend-div {
-    display: flex;
-    flex-direction: column;}
-
-
-
-
-
+  display: flex;
+  flex-direction: column;
+}
 
 div {
   display: inline-block;
@@ -174,16 +239,14 @@ div label {
   display: block;
 }
 
-
 label {
-    margin-left: 2vh;
+  margin-left: 2vh;
 }
-
 
 #home-login {
   display: flex;
   flex-direction: column;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #19537d;
   width: 85vw;
   height: 35vh;
@@ -195,14 +258,14 @@ label {
 }
 
 input {
-    height:5vh;
-    width : 13vw;
-    border-radius: 4vh;
-    margin-right: 2vw;
-    margin-left: 2vw;
-    font-size: inherit;
+  height: 5vh;
+  width: 13vw;
+  border-radius: 4vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  font-size: inherit;
 }
 
 #home-form {
-    margin-bottom: 2vh;
+  margin-bottom: 2vh;
 }
