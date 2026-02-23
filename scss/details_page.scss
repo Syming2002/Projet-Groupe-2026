@@ -1,0 +1,208 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    font-family: "Space Grotesk";
+    font-size: 0.8em;
+}
+
+.connect-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.container-div {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin-right: 2vw;
+}
+
+.sidebar {
+    background-color: $dark-blue;
+    width: 24vw;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.main-title {
+    margin: 50px 0;
+}
+
+.ice-text {
+    text-align: center;
+    color: $ice-white;
+}
+
+.filter-title {
+    margin-bottom: 10px;
+}
+
+.filter-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.ice-button {
+    @include ice-button();
+}
+
+.ice-button:hover {
+    background-color:aquamarine
+}
+
+.fa-user {
+    color: $ice-white;
+    font-size: 3em;
+}
+
+.track-div {
+    background-color: $dark-blue;
+    height: 570px;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    margin-left: 309px;
+    margin-top: 80px;
+    border-radius: 20px;
+}
+
+.track-text {
+    margin-top: 25px;
+}
+
+.ice-div {
+    background-color: $ice-white;
+    width: 947px;
+    height: 415px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.add-track-div {
+    margin-top: 25px;
+}
+
+.add-track-title {
+    margin-bottom: 5px
+}
+
+.ice-add-button {
+    @include ice-add-button();
+}
+
+.form-div {
+    background-color: $dark-blue;
+    width: 1024px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: 309px;
+    margin-top: 50px;
+}
+
+.create-track-title {
+    text-align: center;
+
+}
+
+.form-contener {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+#statut-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ice-button-form {
+    @include ice-button-form();
+}
+
+#post-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#company-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#date-send-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#date-resend-div {
+    display: flex;
+    flex-direction: column;}
+
+
+
+
+
+
+div {
+  display: inline-block;
+}
+
+div label {
+  display: block;
+}
+
+
+label {
+    margin-left: 2vh;
+}
+
+
+#home-login {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  background-color: #19537d;
+  width: 85vw;
+  height: 35vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2vh;
+  font-size: 1em;
+  margin-right: 1vw;
+}
+
+input {
+    height:5vh;
+    width : 13vw;
+    border-radius: 4vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: inherit;
+}
+
+#home-form {
+    margin-bottom: 2vh;
+}
