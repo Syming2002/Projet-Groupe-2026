@@ -71,15 +71,16 @@ main {
 }
 
 .note-btn {
-    width: 4vw;
+    width: 2vw;
   height: 4vh;
   border-radius: 3vw;
   border: 0 solid #19537d;
   margin-bottom: 1vh;
+  margin-left: 1vw;
 }
 
 .note-label {
-    width: 16vw;
+    width: 7vw;
     color: #FFFFFF;
 }
 
@@ -137,9 +138,6 @@ main {
   @include ice-button();
 }
 
-.ice-button:hover {
-  background-color: aquamarine;
-}
 
 .fa-user {
   color: $ice-white;
