@@ -52,61 +52,68 @@
             </div>
         </aside>
         <div class="content-div">
-            <i class="fa-solid fa-universal-access">
-
-            </i>
-            <div class="track-div">
-                <div>
-                    <h3 class="ice-text track-text">Mes suivis</h3>
-                    <div class="ice-div">
+            <div class="extra-button-div">
+                <i class="fa-solid fa-bars" onclick="onBurgerButtonClick()">
                     
-                    </div>
-                    <div class="add-track-div">
-                        <h4 class="ice-text add-track-title">Ajouter un suivi</h4>
-                        <button type="button" class="ice-add-button">
-                            +
-                        </button>
+                </i>
+                <i class="fa-solid fa-universal-access">
+                
+                </i>
+            </div>
+            <div id="div-col">
+                <div class="track-div">
+                    <div>
+                        <h3 class="ice-text track-text">Mes suivis</h3>
+                        <div class="ice-div">
+                        
+                        </div>
+                        <div class="add-track-div">
+                            <h4 class="ice-text add-track-title">Ajouter un suivi</h4>
+                            <button type="button" class="ice-add-button">
+                                +
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-div">
-                <form class="track-form">
-                    <h4 class="create-track-title ice-text">Créer un suivi</h4>
-                    <div class="form-container">
-                        <div id="statut-div">
-                            <label for="" class="ice-text">Statut</label>
-                            <select required name="" id="statut-form" class="ice-button-form">
-                                <option value="">
-                                    Statut
-                                </option>
-                            </select>
+                <div class="form-div">
+                    <form class="track-form">
+                        <h4 class="create-track-title ice-text">Créer un suivi</h4>
+                        <div class="form-container">
+                            <div id="statut-div">
+                                <label for="" class="ice-text">Statut</label>
+                                <select required name="" id="statut-form" class="ice-button-form">
+                                    <option value="">
+                                        Statut
+                                    </option>
+                                </select>
+                            </div>
+                            <div id="post-div">
+                                <label for="" class="ice-text">Poste</label>
+                                <select required name="" id="post-form" class="ice-button-form">
+                                    <option value="">
+                                        Poste
+                                    </option>
+                                </select>
+                            </div>
+                            <div id="company-div">
+                                <label for="" class="ice-text">Entreprise</label>
+                                <select required name="" id="company-form" class="ice-button-form">
+                                    <option value="">
+                                        Entreprise
+                                    </option>
+                                </select>
+                            </div>
+                            <div id="date-send-div">
+                                <label for="date-send-form" class="ice-text">Date d'envoi</label>
+                                <input required type="date" name="date-send-form" id="date-send-form" class="ice-button-form">
+                            </div>
+                            <div id="date-resend-div">
+                                <label for="date-resend-form" class="ice-text">Date de relance</label>
+                                <input type="date" name="date-resend-form" id="date-resend-form" class="ice-button-form">
+                            </div>
                         </div>
-                        <div id="post-div">
-                            <label for="" class="ice-text">Poste</label>
-                            <select required name="" id="post-form" class="ice-button-form">
-                                <option value="">
-                                    Poste
-                                </option>
-                            </select>
-                        </div>
-                        <div id="company-div">
-                            <label for="" class="ice-text">Entreprise</label>
-                            <select required name="" id="company-form" class="ice-button-form">
-                                <option value="">
-                                    Entreprise
-                                </option>
-                            </select>
-                        </div>
-                        <div id="date-send-div">
-                            <label for="date-send-form" class="ice-text">Date d'envoi</label>
-                            <input required type="date" name="date-send-form" id="date-send-form" class="ice-button-form">
-                        </div>
-                        <div id="date-resend-div">
-                            <label for="date-resend-form" class="ice-text">Date de relance</label>
-                            <input type="date" name="date-resend-form" id="date-resend-form" class="ice-button-form">
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
