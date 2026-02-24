@@ -245,13 +245,6 @@ body {
     }
 }
 
-// .sidebar {
-//     background-color: $dark-blue;
-//     width: 274px;
-//     border-top-right-radius: 20px;
-//     border-bottom-right-radius: 20px;
-// }
-
 .main-title {
     margin: 50px 0;
     padding: 10px;
@@ -266,126 +259,19 @@ body {
     margin-bottom: 10px;
 }
 
-// .filter-div {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 50px;
-// }
-
-// .ice-button {
-//     @include ice-button();
-// }
-
 .fa-user {
     color: $ice-white;
     font-size: 3em;
 }
 
-// .content-div {
-//     margin: 25px auto;
-// }
-
-// .fa-universal-access {
-//     color: $dark-blue;
-//     font-size: 42px;
-//     position: fixed;
-//     right: 2%;
-//     top: 2%;
-// }
-
-// .track-div {
-//     background-color: $dark-blue;
-//     height: 570px;
-//     width: 1024px;
-//     display: flex;
-//     justify-content: center;
-//     border-radius: 20px;
-// }
-
-// .track-text {
-//     margin-top: 25px;
-// }
-
-// .ice-div {
-//     background-color: $ice-white;
-//     width: 947px;
-//     height: 415px;
-//     border-radius: 20px;
-//     margin-top: 25px;
-// }
-
-// .add-track-div {
-//     margin-top: 25px;
-// }
-
-// .add-track-title {
-//     margin-bottom: 5px
-// }
-
-// .ice-add-button {
-//     @include ice-add-button();
-// }
-
-// .form-div {
-//     background-color: $dark-blue;
-//     border-radius: 20px;
-//     width: 1024px;
-//     height: 200px;
-//     display: flex;
-//     justify-content: center;
-//     margin-top: 50px;
-// }
-
-// .create-track-title {
-//     text-align: center;
-//     margin-top: 20px;
-// }
-
-// .form-container {
-//     display: flex;
-//     flex-direction: row;
-//     gap: 50px;
-//     margin-top: 30px;
-// }
-
-// #statut-div {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .ice-button-form {
-//     @include ice-button-form();
-// }
-
-// #post-div {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// #company-div {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// #date-send-div {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// #date-resend-div {
-//     display: flex;
-//     flex-direction: column;
-// }
-
 // Desktop Responsiveness
 @media (min-width: 768px) {
+    
     .sidebar {
         background-color: $dark-blue;
         width: 274px;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        transform: translateX(0%)
     }
 
     .filter-div {
@@ -404,12 +290,99 @@ body {
         display: none;
     }
 
+    .content-div {
+        margin: 25px auto;
+    }
+
     .fa-universal-access {
         color: $dark-blue;
         font-size: 42px;
         position: fixed;
         right: 2%;
-        transform: translateX(0%);
         top: 2%;
+    }
+
+    .track-div {
+        background-color: $dark-blue;
+        height: 570px;
+        width: 1024px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+    }
+
+    .track-text {
+        margin-top: 25px;
+    }
+
+    .ice-div {
+        background-color: $ice-white;
+        width: 947px;
+        height: 415px;
+        border-radius: 20px;
+        margin-top: 25px;
+    }
+
+    .add-track-div {
+        margin-top: 25px;
+    }
+
+    .add-track-title {
+        margin-bottom: 5px
+    }
+
+    .ice-add-button {
+        @include ice-add-button();
+    }
+
+    .form-div {
+        background-color: $dark-blue;
+        border-radius: 20px;
+        width: 1024px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .create-track-title {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 30px;
+    }
+
+    #statut-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ice-button-form {
+        @include ice-button-form();
+    }
+
+    #post-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #company-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #date-send-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #date-resend-div {
+        display: flex;
+        flex-direction: column;
     }
 }
