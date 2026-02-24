@@ -4,12 +4,28 @@
     border-radius: 10px;
     background-color: $ice-white;
     border: none;
-    width: 20vw;
-    height: 6vh;
+    width: 140px;
+    height: 50px;
     text-align: center;
     color: $coal-black;
     font-family: "Space Grotesk";
     font-weight: 500;
+    cursor: pointer;
+}
+
+@mixin ice-button-tablet-version() {
+    border-radius: 10px;
+    background-color: $ice-white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: $coal-black;
+    font-size: 1.0em;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
 }
 
 @mixin ice-add-button() {
@@ -23,6 +39,7 @@
     color: $coal-black;
     font-family: "Space Grotesk";
     font-weight: 500;
+    cursor: pointer;
 }
 
 @mixin ice-button-form() {
@@ -35,4 +52,18 @@
     color: $coal-black;
     font-family: "Space Grotesk";
     font-weight: 500;
+    cursor: pointer;
+}
+
+@mixin ice-button-form-tablet-version() {
+    border-radius: 10px;
+    background-color: $ice-white;
+    border: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: $coal-black;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    cursor: pointer;
 }

@@ -1,0 +1,101 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Grotesk";
+    height: 100vh;
+}
+
+.container-div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: $dark-blue;
+    width: 274px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.main-title {
+    margin: 50px 0;
+    padding: 10px;
+}
+
+.ice-text {
+    text-align: center;
+    color: $ice-white;
+}
+
+.nav-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+#profil-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.fa-user {
+    color: $ice-white;
+    font-size: 3em;
+}
+
+.ice-button {
+    @include ice-button();
+}
+
+.watch-tracks-button {
+    text-decoration: none;
+    color: $coal-black;
+}
+
+.content-div {
+    margin: 25px auto;
+}
+
+.fa-universal-access {
+    color: $dark-blue;
+    font-size: 42px;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}
+
+.company-div {
+    width: 1024px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    background-color: $dark-blue;
+    border-radius: 20px;
+}
+
+.company-text {
+    margin-top: 25px;
+}
+
+.ice-div {
+    width: 640px;
+    height: 50px;
+    background-color: $ice-white;
+}
+
+.ice-add-button {
+    @include ice-add-button();
+}
