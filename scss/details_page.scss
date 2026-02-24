@@ -46,6 +46,7 @@ main {
   padding: 0;
   z-index: 1;
   justify-content: right;
+  pointer-events: none;
 }
 
 .info-div {
@@ -84,6 +85,7 @@ main {
 #notes {
   width: 68vw;
   height: 20vh;
+  pointer-events: all;
 }
 
 
