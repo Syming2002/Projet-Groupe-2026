@@ -92,7 +92,7 @@ main {
   background-color: #FFFFFF;
   border: 2vh solid #19537d;
   width: 70vw;
-  height: 40vh;
+  height: 28vh;
   border-radius: 2vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -104,6 +104,12 @@ main {
     padding-left: 1vw;
     padding-bottom: 1vh;
 }
+
+#notes {
+  width: 68vw;
+  height: 20vh;
+}
+
 
 .sidebar {
   background-color: $dark-blue;
@@ -142,91 +148,6 @@ main {
 .fa-user {
   color: $ice-white;
   font-size: 3em;
-}
-
-.track-div {
-  background-color: $dark-blue;
-  height: 570px;
-  width: 1024px;
-  display: flex;
-  justify-content: center;
-  margin-left: 309px;
-  margin-top: 80px;
-  border-radius: 20px;
-}
-
-.track-text {
-  margin-top: 25px;
-}
-
-.ice-div {
-  background-color: $ice-white;
-  width: 947px;
-  height: 415px;
-  border-radius: 20px;
-  margin-top: 25px;
-}
-
-.add-track-div {
-  margin-top: 25px;
-}
-
-.add-track-title {
-  margin-bottom: 5px;
-}
-
-.ice-add-button {
-  @include ice-add-button();
-}
-
-.form-div {
-  background-color: $dark-blue;
-  width: 1024px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  margin-left: 309px;
-  margin-top: 50px;
-}
-
-.create-track-title {
-  text-align: center;
-}
-
-.form-contener {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  margin-top: 30px;
-}
-
-#statut-div {
-  display: flex;
-  flex-direction: column;
-}
-
-.ice-button-form {
-  @include ice-button-form();
-}
-
-#post-div {
-  display: flex;
-  flex-direction: column;
-}
-
-#company-div {
-  display: flex;
-  flex-direction: column;
-}
-
-#date-send-div {
-  display: flex;
-  flex-direction: column;
-}
-
-#date-resend-div {
-  display: flex;
-  flex-direction: column;
 }
 
 div {
