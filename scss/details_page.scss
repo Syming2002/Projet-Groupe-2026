@@ -1,0 +1,171 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk";
+  font-size: 0.8em;
+}
+
+.connect-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 125vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  justify-content: right;
+}
+
+.info-div {
+  background-color: #19537d;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  padding-top: 5vh;
+  padding-left: 2vh;
+}
+
+.info {
+    color: #FFFFFF;
+    margin-bottom: 5vh;
+}
+
+
+.notes-div {
+  background-color: #FFFFFF;
+  border: 2vh solid #19537d;
+  width: 70vw;
+  height: 28vh;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.notes-title {
+    background-color: #19537d;
+    color: #FFFFFF;
+    padding-left: 1vw;
+    padding-bottom: 1vh;
+}
+
+#notes {
+  width: 68vw;
+  height: 20vh;
+}
+
+
+.sidebar {
+  background-color: $dark-blue;
+  width: 24vw;
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+  float: left;
+  height: 100vh;
+}
+
+.main-title {
+  margin: 50px 0;
+}
+
+.ice-text {
+  text-align: center;
+  color: $ice-white;
+}
+
+.filter-title {
+  margin-bottom: 10px;
+}
+
+.filter-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.ice-button {
+  @include ice-button();
+}
+
+
+.fa-user {
+  color: $ice-white;
+  font-size: 3em;
+}
+
+div {
+  display: inline-block;
+}
+
+div label {
+  display: block;
+}
+
+label {
+  margin-left: 2vh;
+}
+
+#home-login {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  background-color: #19537d;
+  width: 85vw;
+  height: 35vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2vh;
+  font-size: 1em;
+  margin-right: 1vw;
+}
+
+input {
+  height: 5vh;
+  width: 13vw;
+  border-radius: 4vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  font-size: inherit;
+}
+
+#home-form {
+  margin-bottom: 2vh;
+}
+
+
+button:hover {
+    background-color:aquamarine
+}
