@@ -23,8 +23,206 @@ body {
     height: 100%;
 }
 
+// Mobile Responsiveness
+@media (max-width: 425px) {
+    body {
+        font-family: "Space Grotesk";
+        height: 200vh;
+    }
+
+    .sidebar {
+        background-color: $dark-blue;
+        width: 137px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+    }
+
+    .sidebar.active {
+        transform: translateX(0%);
+    }
+
+    .filter-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .ice-button {
+        @include ice-button-mobile-version();
+    }
+
+    .content-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .extra-button-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fa-bars {
+        display: flex;
+        font-size: 1.8rem;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        padding: 10px;
+        color: $ice-white;
+        background-color: $dark-blue;
+        margin: 10px 10px;
+        border-radius: 10px;
+
+        transform: translateX(-290%);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-bars.active {
+        transform: translateX(0%);
+    }
+
+    .fa-xmark {
+        display: flex;
+        font-size: 1.8rem;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        padding: 10px;
+        color: $ice-white;
+        background-color: $dark-blue;
+        margin: 10px 10px;
+        border-radius: 10px;
+
+        transition: transform 0.5s ease;
+    }
+
+    .fa-xmark.active {
+        transform: translateX(0%);
+    }
+
+    .fa-universal-access {
+        color: $dark-blue;
+        font-size: 3.2rem;
+        position: fixed;
+        top: 10%;
+    
+        transform: translateX(-255%);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-universal-access.active {
+        transform: translateX(0%);
+    }
+
+    .div-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .track-div {
+        background-color: $dark-blue;
+        height: 320px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        margin: 20px auto;
+    }
+
+    .track-text {
+        margin-top: 25px;
+    }
+
+    .ice-div {
+        background-color: $ice-white;
+        width: 380px;
+        height: 205px;
+        border-radius: 20px;
+        margin-top: 25px;
+    }
+
+    .add-track-div {
+        margin-top: 5px;
+    }
+
+    .add-track-title {
+        margin-bottom: 5px
+    }
+
+    .ice-add-button {
+        @include ice-add-button();
+    }
+
+    .form-div {
+        background-color: $dark-blue;
+        border-radius: 20px;
+        width: 400px;
+        height: auto;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .create-track-title {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #statut-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ice-button-form {
+        @include ice-button-form-tablet-version();
+    }
+
+    #post-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #company-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #date-send-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #date-resend-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .create-button {
+        margin-top: 20px;
+    }
+}
+
 // Tablet Responsiveness
-@media (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
     .sidebar {
         background-color: $dark-blue;
         width: 137px;
@@ -99,45 +297,6 @@ body {
         transform: translateX(0%);
     }
 
-    .fa-bars {
-        display: flex;
-        font-size: 1.8rem;
-        width: 35px;
-        height: 35px;
-        justify-content: center;
-        padding: 10px;
-        color: $ice-white;
-        background-color: $dark-blue;
-        margin: 10px 10px;
-        border-radius: 10px;
-
-        transform: translateX(-400%);
-        transition: transform 0.5s ease;
-    }
-
-    .fa-bars.active {
-        transform: translateX(0%);
-    }
-
-    .fa-xmark {
-        display: flex;
-        font-size: 1.8rem;
-        width: 35px;
-        height: 35px;
-        justify-content: center;
-        padding: 10px;
-        color: $ice-white;
-        background-color: $dark-blue;
-        margin: 10px 10px;
-        border-radius: 10px;
-
-        transition: transform 0.5s ease;
-    }
-
-    .fa-xmark.active {
-        transform: translateX(0%);
-    }
-
     .fa-universal-access {
         color: $dark-blue;
         font-size: 3.2rem;
@@ -168,7 +327,8 @@ body {
     }
 
     .track-text {
-        margin-top: 25px;
+        margin-top: 15px;
+        font-size: 2.4rem;
     }
 
     .ice-div {
@@ -176,7 +336,7 @@ body {
         width: 380px;
         height: 205px;
         border-radius: 20px;
-        margin-top: 25px;
+        margin-top: 15px;
     }
 
     .add-track-div {
@@ -204,6 +364,7 @@ body {
     }
 
     .create-track-title {
+        font-size: 2.4rem;
         text-align: center;
         margin-top: 20px;
     }
@@ -211,8 +372,14 @@ body {
     .form-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        margin-top: 30px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     #statut-div {
@@ -242,6 +409,10 @@ body {
     #date-resend-div {
         display: flex;
         flex-direction: column;
+    }
+
+    .create-button {
+        margin-top: 20px;
     }
 }
 
@@ -287,6 +458,10 @@ body {
 
 
     .fa-bars {
+        display: none;
+    }
+    
+    .fa-xmark {
         display: none;
     }
 
@@ -343,11 +518,12 @@ body {
         display: flex;
         justify-content: center;
         margin-top: 50px;
+        align-items: flex-end;
     }
 
     .create-track-title {
-        text-align: center;
-        margin-top: 20px;
+        font-size: 2.4rem;
+        margin-bottom: -10px;
     }
 
     .form-container {
@@ -355,6 +531,13 @@ body {
         flex-direction: row;
         gap: 50px;
         margin-top: 30px;
+        flex-direction: column; 
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
     }
 
     #statut-div {
@@ -384,5 +567,12 @@ body {
     #date-resend-div {
         display: flex;
         flex-direction: column;
+    }
+
+    .create-button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
     }
 }
