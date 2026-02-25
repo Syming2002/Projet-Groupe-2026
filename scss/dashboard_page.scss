@@ -118,7 +118,7 @@ body {
         transform: translateX(0%);
     }
 
-    .div-col {
+    #div-col {
         display: flex;
         flex-direction: column;
     }
@@ -126,7 +126,7 @@ body {
     .track-div {
         background-color: $dark-blue;
         height: 320px;
-        width: 400px;
+        width: 250px;
         display: flex;
         justify-content: center;
         border-radius: 20px;
@@ -139,7 +139,7 @@ body {
 
     .ice-div {
         background-color: $ice-white;
-        width: 380px;
+        width: 220px;
         height: 205px;
         border-radius: 20px;
         margin-top: 25px;
@@ -160,7 +160,7 @@ body {
     .form-div {
         background-color: $dark-blue;
         border-radius: 20px;
-        width: 400px;
+        width: 250px;
         height: auto;
         padding-bottom: 20px;
         display: flex;
