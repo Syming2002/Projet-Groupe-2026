@@ -60,6 +60,7 @@ const register = () => {
   confirmBtn.id = "confirm-btn"
   confirmBtn.className = "ice-button"
   confirmBtn.innerText = "Valider"
+  confirmBtn.type = "submit"
   confirm.appendChild(confirmBtn)
 };
 
@@ -102,6 +103,7 @@ const login = () => {
   confirmBtn.id = "confirm-btn"
   confirmBtn.className = "ice-button"
   confirmBtn.innerText = "Valider"
+  confirmBtn.type = "submit"
   confirm.appendChild(confirmBtn)
 };
 
