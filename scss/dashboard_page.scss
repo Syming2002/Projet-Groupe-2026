@@ -20,7 +20,7 @@ body {
 .container-div {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 100vh;
 }
 
 // Mobile Responsiveness
@@ -497,6 +497,21 @@ body {
         height: 415px;
         border-radius: 20px;
         margin-top: 25px;
+        overflow: scroll;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .black-div {
+        background-color: $coal-black;
+        width: 700px;
+        height: 100px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        border-radius: 20px;
     }
 
     .add-track-div {

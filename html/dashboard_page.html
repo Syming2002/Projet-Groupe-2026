@@ -80,40 +80,40 @@
                             <div class="input-container">
                                 <div id="statut-div">
                                     <label for="" class="ice-text">Statut</label>
-                                    <select required name="" id="statut-form" class="ice-button-form">
-                                        <option value="">
+                                    <select required name="" id="statut-input" class="ice-button-form">
+                                        <option value="statut">
                                             Statut
                                         </option>
-                                        <option value="">
+                                        <option value="accepted">
                                             Acceptée
                                         </option>
-                                        <option value="">
+                                        <option value="loading">
                                             En attente
                                         </option>
-                                        <option value="">
+                                        <option value="rejected">
                                             Refusée
                                         </option>
                                     </select>
                                 </div>
                                 <div id="post-div">
                                     <label for="" class="ice-text">Poste</label>
-                                    <input required name="" id="post-form" class="ice-button-form"/>
+                                    <input required name="" id="post-input" class="ice-button-form"/>
                                 </div>
                                 <div id="company-div">
                                     <label for="" class="ice-text">Entreprise</label>
-                                    <input required name="" id="company-form" class="ice-button-form"/>
+                                    <input required name="" id="company-input" class="ice-button-form"/>
                                 </div>
                                 <div id="date-send-div">
                                     <label for="date-send-form" class="ice-text">Date d'envoi</label>
-                                    <input required type="date" name="date-send-form" id="date-send-form" class="ice-button-form">
+                                    <input required type="date" name="date-send-input" id="date-send-input" class="ice-button-form">
                                 </div>
                                 <div id="date-resend-div">
                                     <label for="date-resend-form" class="ice-text">Date de relance</label>
-                                    <input type="date" name="date-resend-form" id="date-resend-form" class="ice-button-form">
+                                    <input type="date" name="date-resend-input" id="date-resend-input" class="ice-button-form">
                                 </div>
                             </div>
                             <div class="create-button">
-                                <button class="ice-button-form" onclick="onCreateTrackClick()">
+                                <button type="submit" class="ice-button-form">
                                     Créer le suivi
                                 </button>
                             </div>
