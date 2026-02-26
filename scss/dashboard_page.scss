@@ -270,7 +270,7 @@ body {
         margin: 10px 10px;
         border-radius: 10px;
 
-        transform: translateX(-400%);
+        transform: translateX(-350%);
         transition: transform 0.5s ease;
     }
 
@@ -303,7 +303,7 @@ body {
         position: fixed;
         top: 10%;
     
-        transform: translateX(-350%);
+        transform: translateX(-310%);
         transition: transform 0.5s ease;
     }
 
@@ -433,6 +433,7 @@ body {
 .fa-user {
     color: $ice-white;
     font-size: 3em;
+    margin-bottom: 20px;
 }
 
 // Desktop Responsiveness
@@ -508,6 +509,11 @@ body {
 
     .ice-add-button {
         @include ice-add-button();
+
+    }
+
+    .ice-add-button.active {
+        @include ice-add-button();
     }
 
     .form-div {
@@ -515,7 +521,7 @@ body {
         border-radius: 20px;
         width: 1024px;
         height: 200px;
-        display: flex;
+        display: none;
         justify-content: center;
         margin-top: 50px;
         align-items: flex-end;

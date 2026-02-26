@@ -69,9 +69,7 @@
                         </div>
                         <div class="add-track-div">
                             <h4 class="ice-text add-track-title">Ajouter un suivi</h4>
-                            <button type="button" class="ice-add-button">
-                                +
-                            </button>
+                            <button type="button" class="ice-add-button" onclick="onAddTrackButtonClick()">+</button>
                         </div>
                     </div>
                 </div>
@@ -86,23 +84,24 @@
                                         <option value="">
                                             Statut
                                         </option>
+                                        <option value="">
+                                            Acceptée
+                                        </option>
+                                        <option value="">
+                                            En attente
+                                        </option>
+                                        <option value="">
+                                            Refusée
+                                        </option>
                                     </select>
                                 </div>
                                 <div id="post-div">
                                     <label for="" class="ice-text">Poste</label>
-                                    <select required name="" id="post-form" class="ice-button-form">
-                                        <option value="">
-                                            Poste
-                                        </option>
-                                    </select>
+                                    <input required name="" id="post-form" class="ice-button-form"/>
                                 </div>
                                 <div id="company-div">
                                     <label for="" class="ice-text">Entreprise</label>
-                                    <select required name="" id="company-form" class="ice-button-form">
-                                        <option value="">
-                                            Entreprise
-                                        </option>
-                                    </select>
+                                    <input required name="" id="company-form" class="ice-button-form"/>
                                 </div>
                                 <div id="date-send-div">
                                     <label for="date-send-form" class="ice-text">Date d'envoi</label>
@@ -114,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="create-button">
-                                <button class="ice-button-form">
+                                <button class="ice-button-form" onclick="onCreateTrackClick()">
                                     Créer le suivi
                                 </button>
                             </div>
