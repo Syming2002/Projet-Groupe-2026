@@ -25,6 +25,8 @@ const logoutButton = document.querySelector(".logout-button");
 
 const user = document.querySelector(".fa-user");
 
+const createDetailButtonDisplay = document.createElement("button");
+
 async function displayTrack(data) {
 
     (await data).results.forEach((res) => {
@@ -71,8 +73,6 @@ async function displayTrack(data) {
             sixthDiv.style.gap = "10px";
             sixthDiv.style.alignItems = "center";
 
-            const createDetailButton = document.createElement("button");
-
             const createStatut = document.createElement('p');
             const createPost = document.createElement('p');
             const createCompany = document.createElement('p');
@@ -102,8 +102,8 @@ async function displayTrack(data) {
 
             createBlackDiv.className = "black-div";
 
-            createDetailButton.className = "ice-add-button";
-            createDetailButton.textContent = "+";
+            createDetailButtonDisplay.className = "ice-add-button";
+            createDetailButtonDisplay.textContent = "+";
 
             createStatutText.className = "ice-text";
 
@@ -178,7 +178,7 @@ async function displayTrack(data) {
 
             fifthDiv.append(createResendDate, createResendDateText !== null ? createResendDateText : '-');
 
-            sixthDiv.append(createDetails, createDetailButton);
+            sixthDiv.append(createDetails, createDetailButtonDisplay);
         }
     );
 
@@ -229,6 +229,8 @@ async function onAddTrackButtonClick() {
     }
 }
 
+const createDetailButtonForm = document.createElement("button");
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -275,7 +277,6 @@ form.addEventListener("submit", async (e) => {
             sixthDiv.style.gap = "10px";
             sixthDiv.style.alignItems = "center";
 
-            const createDetailButton = document.createElement("button");
 
             const createStatut = document.createElement('p');
             const createPost = document.createElement('p');
@@ -306,8 +307,8 @@ form.addEventListener("submit", async (e) => {
 
             createBlackDiv.className = "black-div";
 
-            createDetailButton.className = "ice-add-button";
-            createDetailButton.textContent = "+";
+            createDetailButtonForm.className = "ice-add-button";
+            createDetailButtonForm.textContent = "+";
 
             createStatutText.className = "ice-text";
 
@@ -382,8 +383,16 @@ form.addEventListener("submit", async (e) => {
 
             fifthDiv.append(createResendDate, createResendDateText !== null ? createResendDateText : '-');
 
-            sixthDiv.append(createDetails, createDetailButton);
+            sixthDiv.append(createDetails, createDetailButtonForm);
             
     });
 
 displayTrack(getData());
+
+createDetailButtonDisplay.addEventListener("click", () => {
+    window.location.href = "/html/details_page.html";
+})
+
+createDetailButtonForm.addEventListener("click", () => {
+    window.location.href = "/html/details_page.html";
+})
