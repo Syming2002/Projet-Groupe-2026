@@ -25,14 +25,178 @@ const logoutButton = document.querySelector(".logout-button");
 
 const user = document.querySelector(".fa-user");
 
-const dataArray = [];
+async function displayTrack(data) {
+
+    (await data).results.forEach((res) => {
+            const createBlackDiv = document.createElement("div");
+
+            const mainDiv = document.createElement("div");
+
+            const firstDiv = document.createElement("div");
+            const secondDiv = document.createElement("div");
+            const thirdDiv = document.createElement("div");
+            const fourthDiv = document.createElement("div");
+            const fifthDiv = document.createElement("div");
+            const sixthDiv = document.createElement("div");
+
+            
+
+            mainDiv.style.display = "flex";
+            mainDiv.style.alignItems = "center";
+            mainDiv.style.gap = "20px";
+            mainDiv.style.margin = "0 auto";
+
+            firstDiv.style.display = "flex";
+            firstDiv.style.flexDirection = "column";
+            firstDiv.style.gap = "20px";
+
+            secondDiv.style.display = "flex";
+            secondDiv.style.flexDirection = "column";
+            secondDiv.style.gap = "20px";
+
+            thirdDiv.style.display = "flex";
+            thirdDiv.style.flexDirection = "column";
+            thirdDiv.style.gap = "20px";
+
+            fourthDiv.style.display = "flex";
+            fourthDiv.style.flexDirection = "column";
+            fourthDiv.style.gap = "20px";
+
+            fifthDiv.style.display = "flex";
+            fifthDiv.style.flexDirection = "column";
+            fifthDiv.style.gap = "20px";
+
+            sixthDiv.style.display = "flex";
+            sixthDiv.style.flexDirection = "column";
+            sixthDiv.style.gap = "10px";
+            sixthDiv.style.alignItems = "center";
+
+            const createDetailButton = document.createElement("button");
+
+            const createStatut = document.createElement('p');
+            const createPost = document.createElement('p');
+            const createCompany = document.createElement('p');
+            const createDateSend = document.createElement('p');
+            const createResendDate = document.createElement('p');
+            const createDetails = document.createElement('p');
+
+            createStatut.className = "ice-text";
+            createPost.className = "ice-text";
+            createCompany.className = "ice-text";
+            createDateSend.className = "ice-text";
+            createResendDate.className = "ice-text";
+            createDetails.className = "ice-text";
+
+            createStatut.textContent = "Statut";
+            createPost.textContent = "Poste";
+            createCompany.textContent = "Entreprise";
+            createDateSend.textContent = "Date d'envoi";
+            createResendDate.textContent = "Date de relance";
+            createDetails.textContent = "Details";
+
+            const createStatutText = document.createElement('p');
+            const createPostText = document.createElement('p');
+            const createCompanyText = document.createElement('p');
+            const createDateSendText = document.createElement('p');
+            const createResendDateText = document.createElement('p');
+
+            createBlackDiv.className = "black-div";
+
+            createDetailButton.className = "ice-add-button";
+            createDetailButton.textContent = "+";
+
+            createStatutText.className = "ice-text";
+
+            createPostText.className = "ice-text";
+            createCompanyText.className = "ice-text";
+            createDateSendText.className = "ice-text";
+            createResendDateText.className = "ice-text";
+
+            if (window.screen.width >= 425 && window.screen.width <= 768) {
+
+                mainDiv.style.display = "flex";
+                mainDiv.style.gap = "10px";
+                
+                createStatut.style.fontSize = "8px";
+                createStatutText.style.fontSize = "8px";
+
+                createPost.style.fontSize = "8px";
+                createPostText.style.fontSize = "8px";
+
+                createCompany.style.fontSize = "8px";
+                createCompanyText.style.fontSize = "8px";
+
+                createDateSend.style.fontSize = "8px";
+                createDateSendText.style.fontSize = "8px";
+
+                createResendDate.style.fontSize = "8px";
+                createResendDateText.style.fontSize = "8px";
+            }
+
+
+            if (window.screen.width < 425) {
+
+                mainDiv.style.display = "flex";
+                mainDiv.style.gap = "10px";
+                
+                createStatut.style.fontSize = "8px";
+                createStatutText.style.fontSize = "8px";
+
+                createPost.style.fontSize = "8px";
+                createPostText.style.fontSize = "8px";
+
+                createCompany.style.fontSize = "8px";
+                createCompanyText.style.fontSize = "8px";
+
+                createDateSend.style.fontSize = "8px";
+                createDateSendText.style.fontSize = "8px";
+
+                createResendDate.style.fontSize = "8px";
+                createResendDateText.style.fontSize = "8px";
+            }
+
+
+            createStatutText.textContent = res.statut;
+            createPostText.textContent = res.poste_vise;
+            createCompanyText.textContent = res.nom_entreprise;
+            createDateSendText.textContent = res.date_envoi;
+            createResendDateText.textContent = res.date_cloture;
+
+            iceDiv.appendChild(createBlackDiv);
+
+            createBlackDiv.appendChild(mainDiv);
+
+            mainDiv.append(firstDiv, secondDiv, thirdDiv, fourthDiv, fifthDiv, sixthDiv);
+
+            firstDiv.append(createStatut, createStatutText);
+
+            secondDiv.append(createPost, createPostText, createCompanyText, createDateSendText);
+
+            thirdDiv.append(createCompany, createCompanyText);
+
+            fourthDiv.append(createDateSend, createDateSendText);
+
+            fifthDiv.append(createResendDate, createResendDateText !== null ? createResendDateText : '-');
+
+            sixthDiv.append(createDetails, createDetailButton);
+        }
+    );
+
+    
+
+    
+
+    console.log("Black Div Created");
+}
 
 async function getData() {
     try {
-        const fetch = await fetch("/json/list_company.json");
+        const fetchData = await fetch("/json/list_company.json");
 
-        const data = await fetch.json();
-        dataArray = data;
+        const data = await fetchData.json();
+
+        console.log(data);
+        return data;
 
     } catch (error) {
         console.error("Erreur: ", error);
@@ -55,7 +219,7 @@ function onBurgerButtonClick() {
     }
 }
 
-function onAddTrackButtonClick() {
+async function onAddTrackButtonClick() {
     if (trackButton.textContent === '+') {
         trackButton.textContent = '-';
         formDiv.style.display = "flex";
@@ -63,108 +227,163 @@ function onAddTrackButtonClick() {
         trackButton.textContent = '+';
         formDiv.style.display = "none";
     }
-
-    const createBlackDiv = document.createElement("div");
-
-    const createDetailButton = document.createElement("button");
-
-    const createStatutText = document.createElement('p');
-    const createPostText = document.createElement('p');
-    const createCompanyText = document.createElement('p');
-    const createDateSendText = document.createElement('p');
-    const createResendDateText = document.createElement('p');
-
-    const createStatut = document.createElement('p');
-    const createPost = document.createElement('p');
-    const createCompany = document.createElement('p');
-    const createDateSend = document.createElement('p');
-    const createResendDate = document.createElement('p');
-
-    createBlackDiv.className = "black-div";
-
-    createDetailButton.className = "ice-add-button";
-    createDetailButton.textContent = "+";
-
-    createStatutText.className = "ice-text";
-
-    createPostText.className = "ice-text";
-    createCompanyText.className = "ice-text";
-    createDateSendText.className = "ice-text";
-    createResendDateText.className = "ice-text";
-    
-
-    dataArray.forEach((res) => {
-
-            createStatutText.textContent = res.statut
-            createPostText.textContent = res.poste_vise
-            createCompanyText.textContent = res.nom_entreprise
-            createDateSendText.textContent = res.date_envoi
-            createResendDateText.textContent = res.date_cloture
-        }
-    );
-
-    iceDiv.appendChild(createBlackDiv);
-    createBlackDiv.append(createStatutText, createPostText, createCompanyText, createDateSendText, createResendDateText ? createResendDateText : '-', createDetailButton);
-
-    
-
-    console.log("Black Div Created");
 }
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    // const statutValue = statutInput.value;
-    // const postValue = postInput.value;
-    // const companyValue = companyInput.value;
-    // const dateSendValue = dateSendInput.value;
-    // const dateResendValue = dateResendInput.value;
 
     const createBlackDiv = document.createElement("div");
 
-    const createDetailButton = document.createElement("div");
+            const mainDiv = document.createElement("div");
 
-    const createStatutText = document.createElement('p');
-    const createPostText = document.createElement('p');
-    const createCompanyText = document.createElement('p');
-    const createDateSendText = document.createElement('p');
-    const createResendDateText = document.createElement('p');
+            const firstDiv = document.createElement("div");
+            const secondDiv = document.createElement("div");
+            const thirdDiv = document.createElement("div");
+            const fourthDiv = document.createElement("div");
+            const fifthDiv = document.createElement("div");
+            const sixthDiv = document.createElement("div");
 
-    createBlackDiv.className = "black-div";
+            
 
-    createDetailButton.className = "ice-add-button";
+            mainDiv.style.display = "flex";
+            mainDiv.style.alignItems = "center";
+            mainDiv.style.gap = "20px";
+            mainDiv.style.margin = "0 auto";
 
-    createStatutText.className = "ice-text";
-    createPostText.className = "ice-text";
-    createCompanyText.className = "ice-text";
-    createDateSendText.className = "ice-text";
-    createResendDateText.className = "ice-text";
+            firstDiv.style.display = "flex";
+            firstDiv.style.flexDirection = "column";
+            firstDiv.style.gap = "20px";
+
+            secondDiv.style.display = "flex";
+            secondDiv.style.flexDirection = "column";
+            secondDiv.style.gap = "20px";
+
+            thirdDiv.style.display = "flex";
+            thirdDiv.style.flexDirection = "column";
+            thirdDiv.style.gap = "20px";
+
+            fourthDiv.style.display = "flex";
+            fourthDiv.style.flexDirection = "column";
+            fourthDiv.style.gap = "20px";
+
+            fifthDiv.style.display = "flex";
+            fifthDiv.style.flexDirection = "column";
+            fifthDiv.style.gap = "20px";
+
+            sixthDiv.style.display = "flex";
+            sixthDiv.style.flexDirection = "column";
+            sixthDiv.style.gap = "10px";
+            sixthDiv.style.alignItems = "center";
+
+            const createDetailButton = document.createElement("button");
+
+            const createStatut = document.createElement('p');
+            const createPost = document.createElement('p');
+            const createCompany = document.createElement('p');
+            const createDateSend = document.createElement('p');
+            const createResendDate = document.createElement('p');
+            const createDetails = document.createElement('p');
+
+            createStatut.className = "ice-text";
+            createPost.className = "ice-text";
+            createCompany.className = "ice-text";
+            createDateSend.className = "ice-text";
+            createResendDate.className = "ice-text";
+            createDetails.className = "ice-text";
+
+            createStatut.textContent = "Statut";
+            createPost.textContent = "Poste";
+            createCompany.textContent = "Entreprise";
+            createDateSend.textContent = "Date d'envoi";
+            createResendDate.textContent = "Date de relance";
+            createDetails.textContent = "Details";
+
+            const createStatutText = document.createElement('p');
+            const createPostText = document.createElement('p');
+            const createCompanyText = document.createElement('p');
+            const createDateSendText = document.createElement('p');
+            const createResendDateText = document.createElement('p');
+
+            createBlackDiv.className = "black-div";
+
+            createDetailButton.className = "ice-add-button";
+            createDetailButton.textContent = "+";
+
+            createStatutText.className = "ice-text";
+
+            createPostText.className = "ice-text";
+            createCompanyText.className = "ice-text";
+            createDateSendText.className = "ice-text";
+            createResendDateText.className = "ice-text";
 
 
-    // createStatutText.textContent = statutValue;
-    // createPostText.textContent = postValue;
-    // createCompanyText.textContent = companyValue;
-    // createDateSendText.textContent = dateSendValue;
-    // createResendDateText.textContent = dateResendValue;
-    
-    const data = fetch("/json/list_company.json")
-        .then(res => res.json())
-        .then(data => data)
-        .catch(err => console.error(err));
+            if (window.screen.width >= 425 && window.screen.width <= 768) {
 
-    const results = data.results;
+                mainDiv.style.display = "flex";
+                mainDiv.style.gap = "10px";
+                
+                createStatut.style.fontSize = "8px";
+                createStatutText.style.fontSize = "8px";
+
+                createPost.style.fontSize = "8px";
+                createPostText.style.fontSize = "8px";
+
+                createCompany.style.fontSize = "8px";
+                createCompanyText.style.fontSize = "8px";
+
+                createDateSend.style.fontSize = "8px";
+                createDateSendText.style.fontSize = "8px";
+
+                createResendDate.style.fontSize = "8px";
+                createResendDateText.style.fontSize = "8px";
+            }
 
 
-    iceDiv.appendChild(createBlackDiv);
-    createBlackDiv.append(createStatutText, createPostText, createCompanyText, createDateSendText, createResendDateText ? createResendDateText : '-');
+            if (window.screen.width < 425) {
 
-    results.forEach(res => 
-        createStatutText.textContent = res.statut,
-        createPostText.textContent = res.post_vise,
-        createCompanyText.textContent = res.nom_entreprise,
-        createDateSendText.textContent = res.date_envoi,
-        createResendDateText.textContent = res.date_cloture
-    );
+                mainDiv.style.display = "flex";
+                mainDiv.style.gap = "10px";
+                
+                createStatut.style.fontSize = "8px";
+                createStatutText.style.fontSize = "8px";
 
-    console.log("Black Div Created !!!!");
-})
+                createPost.style.fontSize = "8px";
+                createPostText.style.fontSize = "8px";
+
+                createCompany.style.fontSize = "8px";
+                createCompanyText.style.fontSize = "8px";
+
+                createDateSend.style.fontSize = "8px";
+                createDateSendText.style.fontSize = "8px";
+
+                createResendDate.style.fontSize = "8px";
+                createResendDateText.style.fontSize = "8px";
+            }
+
+            createStatutText.textContent = statutInput.value;
+            createPostText.textContent = postInput.value;
+            createCompanyText.textContent = companyInput.value;
+            createDateSendText.textContent = dateSendInput.value;
+            createResendDateText.textContent = dateResendInput.value;
+
+            iceDiv.appendChild(createBlackDiv);
+
+            createBlackDiv.appendChild(mainDiv);
+
+            mainDiv.append(firstDiv, secondDiv, thirdDiv, fourthDiv, fifthDiv, sixthDiv);
+
+            firstDiv.append(createStatut, createStatutText);
+
+            secondDiv.append(createPost, createPostText, createCompanyText, createDateSendText);
+
+            thirdDiv.append(createCompany, createCompanyText);
+
+            fourthDiv.append(createDateSend, createDateSendText);
+
+            fifthDiv.append(createResendDate, createResendDateText !== null ? createResendDateText : '-');
+
+            sixthDiv.append(createDetails, createDetailButton);
+            
+    });
+
+displayTrack(getData());

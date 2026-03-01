@@ -3,27 +3,27 @@
     [
         {
             "poste_vise": "Stage",
-            "statut": "Accepté",
+            "statut": "accepted",
             "nom_entreprise": "AMAC Aerospace",
             "id_suivi": 1,
-            "date_envoi": "23/11/2025",
-            "date_cloture": "16/03/2025"
+            "date_envoi": "2025-11-23",
+            "date_cloture": "2025-3-16"
         },
     
         {
             "poste_vise": "Stage",
-            "statut": "Refusé",
+            "statut": "rejected",
             "nom_entreprise": "Hupp Communication",
             "id_suivi": 2,
-            "date_envoi": "7/12/2025",
-            "date_cloture": "8/12/2025"
+            "date_envoi": "2025-12-07",
+            "date_cloture": "2025-12-08"
         },
         {
             "poste_vise": "Stage",
-            "statut": "En Cours",
+            "statut": "loading",
             "nom_entreprise": "Nicolas Brunet",
             "id_suivi": 3,
-            "date_envoi": "18/1/2026",
+            "date_envoi": "2026-1-18",
             "date_cloture": null
         }
     ]

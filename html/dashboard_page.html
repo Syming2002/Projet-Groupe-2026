@@ -16,30 +16,40 @@
                 <h2 class="ice-text filter-title">Trier par:</h2>
                 <div class="filter-div">
                     <select name="statut" id="statut-select" class="ice-button">
-                        <option value="">
+                        <option value="statut">
                             Statut
+                        </option>
+                        <option value="accepted">
+                            Accepté
+                        </option>
+                        <option value="loading">
+                            En Cours
+                        </option>
+                        <option value="rejected">
+                            Rejeté
                         </option>
                     </select>
                     <select name="post" id="post-select" class="ice-button">
-                        <option value="">
+                        <option value="post">
                             Poste
                         </option>
                     </select>
                     <select name="company" id="company-select" class="ice-button">
-                        <option value="">
+                        <option value="company">
                             Entreprise
                         </option>
                     </select>
                     <select name="date-send" id="date-send-select" class="ice-button">
-                        <option value="">
+                        <option value="date-send">
                             Date d'envoi
                         </option>
                     </select>
                     <select name="date-resend" id="date-resend-select" class="ice-button">
-                        <option value="">
+                        <option value="date-resend">
                             Date de relance
                         </option>
                     </select>
+                    <button type="button" id="apply" class="ice-button">Appliquer</button>
                     <button class="logout-button ice-button">
                         Déconnexion
                     </button>
