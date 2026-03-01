@@ -1,13 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Détails</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/details_page.css">
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/details_page.css" />
+    <script src="../js/details_page.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <aside class="sidebar">
+        <h1 class="ice-text main-title">Job Handler</h1>
+        <div class="connect-button">
+          <div class="options-div">
+            <button class="ice-button">Voir mes suivis</button>
+            <button class="ice-button">Voir mes favoris</button>
+            <button class="ice-button">Déconnexion</button>
+            <a href="./user_page.html"><i class="fa-solid fa-user"></i></a>
+          </div>
+        </div>
+      </aside>
+      <div class="container-div">
+        <div class="info-div">
+          <div>
+            <p class="info">Entreprise :</p>
+            <p class="info">Poste :</p>
+            <p class="info">Lieu :</p>
+            <p class="info">Source :</p>
+            <p class="info">Téléphone :</p>
+            <p class="info">Email :</p>
+          </div>
+        </div>
+        <div class="notes-div"><h2 class="notes-title">Notes</h2><textarea name="notes" id="notes"></textarea></div>
+      </div>
+    </main>
+  </body>
 </html>
