@@ -387,3 +387,7 @@ form.addEventListener("submit", async (e) => {
     });
 
 displayTrack(getData());
+
+function onLogoutButtonClick() {
+    window.location.href = "/html/home_page.html";
+}

@@ -3,6 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Space Grotesk";
     font-size: 0.8em;
@@ -16,40 +22,40 @@ body {
 
 main {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
 }
 
 .container-div {
     display: flex;
-    flex-direction: row;
     height: 100vh;
-    margin-right: 2vw;
 }
 
 .sidebar {
     background-color: $dark-blue;
-    width: 24vw;
+    width: 150px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .main-title {
-    margin: 50px 0;
+    margin: 25px 0;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .ice-text {
     text-align: center;
     color: $ice-white;
+}
+
+.nav-div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    gap: 25px;
 }
 
 .filter-title {
@@ -67,24 +73,40 @@ main {
     @include ice-button();
 }
 
-.ice-button:hover {
-    background-color:aquamarine
-}
-
-.fa-user {
-    color: $ice-white;
-    font-size: 3em;
-}
-
-.track-div {
-    background-color: $dark-blue;
-    height: 570px;
-    width: 1024px;
+.content-div {
     display: flex;
     justify-content: center;
-    margin-left: 309px;
-    margin-top: 80px;
-    border-radius: 20px;
+    margin: auto;
+}
+
+.extra-button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-bars {
+    display: none;
+}
+
+.fa-bars.active {
+    display: none;
+}
+
+.fa-xmark {
+    display: none;
+}
+
+.fa-xmark.active {
+    display: none;
+}
+
+.fa-universal-access {
+    color: $dark-blue;
+    font-size: 3.2rem;
+    position: fixed;
+    top: 50%;
+    right: 2%;
 }
 
 .track-text {
@@ -117,13 +139,10 @@ main {
     height: 200px;
     display: flex;
     justify-content: center;
-    margin-left: 309px;
-    margin-top: 50px;
 }
 
 .create-track-title {
     text-align: center;
-
 }
 
 .form-contener {
@@ -159,12 +178,8 @@ main {
 
 #date-resend-div {
     display: flex;
-    flex-direction: column;}
-
-
-
-
-
+    flex-direction: column;
+}
 
 div {
   display: inline-block;
@@ -183,15 +198,14 @@ label {
 #home-login {
   display: flex;
   flex-direction: column;
-  color: #FFFFFF;
-  background-color: #19537d;
-  width: 85vw;
-  height: 35vh;
+  color: $ice-white;
+  background-color: $dark-blue;
+  width: 500px;
+  height: 250px;
   align-items: center;
   justify-content: center;
-  border-radius: 2vh;
+  border-radius: 20px;
   font-size: 1em;
-  margin-right: 1vw;
 }
 
 input {
@@ -204,5 +218,79 @@ input {
 }
 
 #home-form {
-    margin-bottom: 2vh;
+    display: flex;
+    margin: auto;
+}
+
+.names-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-password-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#confirm {
+    @include ice-button();
+    margin: auto;
+}
+
+@media (min-width: 475px) and (max-width: 1024px) {
+
+    .fa-bars {
+        display: flex;
+        font-size: 1.8rem;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        padding: 10px;
+        color: $ice-white;
+        background-color: $dark-blue;
+        margin: 10px 10px;
+        border-radius: 10px;
+
+        transform: translateX(-290%);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-bars.active {
+        transform: translateX(0%);
+    }
+
+    .fa-xmark {
+        display: flex;
+        font-size: 1.8rem;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        padding: 10px;
+        color: $ice-white;
+        background-color: $dark-blue;
+        margin: 10px 10px;
+        border-radius: 10px;
+
+        transition: transform 0.5s ease;
+    }
+
+    .fa-xmark.active {
+        transform: translateX(0%);
+    }
+
+    .fa-universal-access {
+        color: $dark-blue;
+        font-size: 3.2rem;
+        position: fixed;
+        top: 10%;
+
+        transform: translateX(-255%);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-universal-access.active {
+        transform: translateX(0%);
+    }
 }
