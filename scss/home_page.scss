@@ -35,7 +35,7 @@ main {
 
 .sidebar {
     background-color: $dark-blue;
-    width: 150px;
+    width: 250px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -55,6 +55,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-left: 25px;
+    align-items: center;
     gap: 25px;
 }
 
@@ -161,26 +162,6 @@ main {
     @include ice-button-form();
 }
 
-#post-div {
-    display: flex;
-    flex-direction: column;
-}
-
-#company-div {
-    display: flex;
-    flex-direction: column;
-}
-
-#date-send-div {
-    display: flex;
-    flex-direction: column;
-}
-
-#date-resend-div {
-    display: flex;
-    flex-direction: column;
-}
-
 div {
   display: inline-block;
 }
@@ -201,11 +182,15 @@ label {
   color: $ice-white;
   background-color: $dark-blue;
   width: 500px;
-  height: 250px;
+  height: 300px;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
   font-size: 1em;
+}
+
+.register-title {
+    margin-bottom: 20px;
 }
 
 #home-form {

@@ -9,6 +9,7 @@ const register = () => {
   const confirm = document.getElementById("confirm");
   confirm.innerHTML = '';
   const title = document.getElementById("form-title");
+  title.classList.add("register-title");
   title.textContent = "S'inscrire";
 
   const nameDiv = document.createElement("div");
@@ -73,7 +74,7 @@ const register = () => {
   
   const confirmBtn = document.createElement("button")
   confirmBtn.id = "confirm-btn"
-  confirmBtn.className = "ice-button"
+  confirmBtn.classList.add("ice-button-form");
   confirmBtn.innerText = "Valider"
   confirm.appendChild(confirmBtn)
 };
